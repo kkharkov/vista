@@ -24,7 +24,7 @@ launch_wallpaper(GtkApplication *app) {
   // w.navigate("https://en.m.wikipedia.org/wiki/Main_Page");
   
   // extern variable to trigger reload?
-  w.navigate("file:///home/kk/Documents/Personal/TUX/assets/ChonkerAlpha/index.html");
+  w.navigate("file:///home/kk/Documents/Personal/vista/assets/ChonkerAlpha/index.html");
   w.run();
 }
 
@@ -49,7 +49,7 @@ launch_wp_manager(GtkApplication *app) {
 
 int main(int argc, char* argv[]) {
   auto app = gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE);
-  g_signal_connect(app, "activate", G_CALLBACK (activate), NULL);
+  //g_signal_connect(app, "launch_wallpaper", G_CALLBACK (activate), NULL);
   launch_wallpaper(GTK_APPLICATION(app));
   return 0;
 }
