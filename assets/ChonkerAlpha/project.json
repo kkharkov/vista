@@ -1,0 +1,72 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "Click the doge",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"backgroundcolor" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Background Color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"backgroundimage" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "Background Image",
+				"type" : "file",
+				"value" : ""
+			},
+			"backgroundsize" : 
+			{
+				"index" : 2,
+				"options" : 
+				[
+					{
+						"label" : "Cover",
+						"value" : "0"
+					},
+					{
+						"label" : "Fit",
+						"value" : "1"
+					}
+				],
+				"order" : 102,
+				"text" : "Background Size",
+				"type" : "combo",
+				"value" : "0"
+			},
+			"dogothickness" : 
+			{
+				"fraction" : false,
+				"index" : 3,
+				"max" : 500,
+				"min" : 20,
+				"order" : 103,
+				"text" : "Dogo Thickness",
+				"type" : "slider",
+				"value" : 100
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Pixel art" ],
+	"title" : "Nervous Dog Bouncing DVD",
+	"type" : "Web",
+	"version" : 4,
+	"visibility" : "public",
+	"workshopid" : "2717323779",
+	"workshopurl" : "steam://url/CommunityFilePage/2717323779"
+}
