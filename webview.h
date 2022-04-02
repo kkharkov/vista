@@ -498,7 +498,7 @@ public:
 
     WebKitSettings *settings =
         webkit_web_view_get_settings(WEBKIT_WEB_VIEW(m_webview));
-        webkit_settings_set_javascript_can_access_clipboard(settings, true); // maybe not? TUX
+        webkit_settings_set_javascript_can_access_clipboard(settings, true); // maybe not?
         // g_object_set(G_OBJECT(settings),"enable-file-access-from-file-uris", TRUE, NULL);
         webkit_web_view_set_settings(WEBKIT_WEB_VIEW(m_webview), settings);
 
@@ -565,7 +565,9 @@ public:
                                    NULL, NULL);
   }
   
-  // TUX - Linux specific functions
+  // Vista
+  // add function to disable in webkit settings anything that isn't needed (e.g. JavaScript is disabled if there isn't a .js file)
+
   void keep_below(bool select) {
     gtk_window_set_keep_below(GTK_WINDOW(m_window), select);
   }
@@ -575,12 +577,12 @@ public:
   }
 
   void set_fullscreen() {
-    gtk_window_fullscreen(GTK_WINDOW(m_window)); // fullscreen over everything - no
+    gtk_window_fullscreen(GTK_WINDOW(m_window)); // fullscreen over everything - NO
   }
 
   bool check_max() {
     return gtk_window_is_maximized(GTK_WINDOW(m_window));
-  }
+  } 
 
   void hide_header() {
       GtkHeaderBar* header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
@@ -591,8 +593,14 @@ public:
       gtk_window_set_titlebar(GTK_WINDOW(m_window), GTK_WIDGET(header_bar));
   }
 
+  void reload() {
+    webkit_web_view_reload(WEBKIT_WEB_VIEW(m_webview));
+  }
 
-
+  GtkWidget* get_window() {
+    return m_window;
+  }
+  
 private:
   virtual void on_message(const std::string msg) = 0;
   GtkWidget *m_window;
